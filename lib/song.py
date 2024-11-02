@@ -1,5 +1,4 @@
 class Song:
-    # Class attributes
     count = 0
     genres = []
     artists = []
@@ -12,10 +11,8 @@ class Song:
         self.genre = genre
 
         Song.add_song_to_count()
-
         Song.add_to_artists(artist)
         Song.add_to_genres(genre)
-
         Song.add_to_genre_count(genre)
         Song.add_to_artist_count(artist)
 
@@ -47,10 +44,13 @@ class Song:
         else:
             cls.artist_count[artist] = 1
 
+
+# Creating Song instances
 ninety_nine_problems = Song("99 Problems", "Jay-Z", "Rap")
 halo = Song("Halo", "Beyonce", "Pop")
 another_song = Song("Song 2", "Jay-Z", "Rap")
 
+# Displaying counts and lists
 print(Song.count)  # => 3
 print(Song.artists)  # => ["Jay-Z", "Beyonce"]
 print(Song.genres)  # => ["Rap", "Pop"]
